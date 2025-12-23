@@ -5,7 +5,6 @@ from logging.handlers import RotatingFileHandler
 import joblib
 import logging
 import sys
-#import os
 
 # Configuração de logs o terminal e arquivo
 # Configuração de Rodízio (Substitui o FileHandler comum)
