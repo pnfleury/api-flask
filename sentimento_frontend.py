@@ -4,7 +4,7 @@ from requests.auth import HTTPBasicAuth  # Importação necessária para Basic A
 
 # 1. Configurações da sua API REST
 API_URL = "http://localhost:8080/sentiment"
-API_URL_STATS = "http://localhost:8080/stats"
+API_URL_STATS = "http://localhost:8080/sentiments/stats"
 USUARIO = "admin" # Coloque seu usuário aqui
 SENHA = "123456"     # Coloque sua senha aqui
 
@@ -21,9 +21,10 @@ if st.button("Analisar (positivo ou negativo)"):
             response = requests.post(API_URL, json=payload, auth=HTTPBasicAuth(USUARIO, SENHA))
             
             # 3. Tratando a resposta
-            if response.status_code == 200:
-                st.success("Sucesso!")
-                st.json(response.json())
+            if response.status_code in [200, 201]:
+                data = response.json()
+                st.success(f"Análise concluída! ID: {data.get('id')}")
+                st.write(f"Sentimento: {data.get('sentimento')}")    
             elif response.status_code == 401:
                 st.error("Erro 401: Usuário ou senha do Basic Auth estão incorretos.")
             else:
