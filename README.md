@@ -63,10 +63,22 @@ Detalhamento dos Campos
 * Todo o processo de análise exploratória, pré-processamento de texto e treinamento do modelo pode ser visualizado no Google Colab:
 * [Link para o Notebook do Projeto] (Substitua pelo seu link aqui)
 
-## 6. Execução e Testes
-* Por padrão, a API Flask roda em http://localhost:5000.
-* Via Postman ou Insomnia você pode validar o funcionamento do motor de IA enviando uma requisição POST para:  
-* http://localhost:5000/sentiment
+## 6. 🧪Execução e Testes
+* No diretório raiz da API Python/Flask, execute: ```docker-compose up --build```. 
+* O serviço estará disponível em http://localhost:5000.
+* Use o Postman ou Insomnia para validar o funcionamento enviando uma requisição POST para:  
+* http://localhost:5000/sentiment 
+```json
+    {
+     "comentario": "Adorei o produto",
+     "threshold": 0.5
+    }
+  ```  
+  
+<br>
 
-### Desenvolvido durante o Hackathon - FeedbackNow Team 🚀
----
+***
+🚀Desenvolvido durante o Hackathon - FeedbackNow Team 
+
+
+ 

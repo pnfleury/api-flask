@@ -4,6 +4,9 @@ from logging.handlers import RotatingFileHandler
 import joblib
 import logging
 import sys
+import warnings
+
+warnings.filterwarnings("ignore", category=UserWarning)
 
 # Configuração de logs o terminal e arquivo
 # Configuração de Rodízio (Substitui o FileHandler comum)
@@ -122,4 +125,4 @@ def predict_batch():
     return jsonify(resultados), 200
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
