@@ -61,7 +61,7 @@ Detalhamento dos Campos
 
 ## 5. 🔬 Pesquisa e Treinamento (Notebook)
 * Todo o processo de análise exploratória, pré-processamento de texto e treinamento do modelo pode ser visualizado no Google Colab:
-* [Link para o Notebook do Projeto] (Substitua pelo seu link aqui)
+* [Link para o Notebook do Projeto] https://colab.research.google.com/drive/1Rh-BoGp4w_VTBm5bo5VTWq-uTsyDcXg0?usp=sharing
 
 ## 6. 🧪Execução e Testes
 * No diretório raiz da API Python/Flask, execute: ```docker-compose up --build```. 
@@ -78,7 +78,7 @@ Detalhamento dos Campos
 <br>
 
 ***
-🚀Desenvolvido durante o Hackathon - FeedbackNow Team 
+### 🚀Desenvolvido durante o Hackathon - FeedbackNow Team 
 
 
  
